@@ -46,16 +46,16 @@ class Param:
         path = pathlib.Path(path)
         if path.is_file() and not overwrite:
             raise IOError(f"File {path} exists and overwrite=False")
-        if use_template:
-            PARAM_TEMPLATE = pathlib.Path(__file__).parent / 'param.nml' if use_template is True else use_template
-            schism_param_sample = schism_init.read_schism_param_sample_patched(PARAM_TEMPLATE)
-            tmpfile = tempfile.NamedTemporaryFile()
-            with open(tmpfile.name, 'w') as fh:
-                fh.write(schism_param_sample)
-            f90nml.patch(tmpfile.name, self.to_dict(), path)
-        else:
-            with open(path, "w") as f:
-                f.write(str(self))
+        #if use_template:
+        #    PARAM_TEMPLATE = pathlib.Path(__file__).parent / 'param.nml' if use_template is True else use_template
+        #    schism_param_sample = schism_init.read_schism_param_sample_patched(PARAM_TEMPLATE)
+        #    tmpfile = tempfile.NamedTemporaryFile()
+        #    with open(tmpfile.name, 'w') as fh:
+        #        fh.write(schism_param_sample)
+        #    f90nml.patch(tmpfile.name, self.to_dict(), path)
+        #else:
+        #    with open(path, "w") as f:
+        #        f.write(str(self))
 
     def to_dict(self):
         return {
