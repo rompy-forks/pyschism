@@ -10,7 +10,7 @@ from pyschism.forcing.nws.nws2.sflux import SfluxDataset
 from pyschism.mesh import gridgr3
 
 
-SFLUX_DEFAULTS = f90nml.read(pathlib.Path(__file__).parent / "sflux_inputs.txt")
+#SFLUX_DEFAULTS = f90nml.read(pathlib.Path(__file__).parent / "sflux_inputs.txt")
 
 
 class NWS2(NWS):
