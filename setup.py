@@ -103,7 +103,7 @@ setuptools.setup(
     setup_requires=[
         "wheel",
         #"setuptools_scm",
-        "setuptools>=58",
+        "setuptools>=59",
         "netcdf-flattener>=1.2.0",
     ],
     include_package_data=True,
