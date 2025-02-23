@@ -106,6 +106,7 @@ setuptools.setup(
         "setuptools>=59",
         "netcdf-flattener>=1.2.0",
     ],
+    package_data={ meta["name"]: [ 'param/param.nml' ] },
     include_package_data=True,
     extras_require={"dev": ["coverage", "flake8", "nose"]},
     cmdclass={"build_schism": BuildSchism},
